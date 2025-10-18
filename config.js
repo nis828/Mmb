@@ -55,7 +55,7 @@ class EnterpriseConfigurationManager {
     constructAdvancedFeatureConfiguration() {
         return {
             autoplay: true,           // 👈 Auto-play related songs when queue ends
-            centralSystem: false,      // 👈 Enable central music control system
+            centralSystem: true,      // 👈 Enable central music control system
             autoVcCreation: true,     // 👈 🔥 PREMIUM: Auto voice channel creation
             updateStatus: true,       // 👈 Update bot status with current song  
             autoDeaf: true,           // 👈 Auto-deafen bot in voice channels
@@ -101,6 +101,7 @@ module.exports = primaryApplicationConfiguration;
  * Never share your bot token or database URI publicly!
  * Use environment variables in production!
  */
+
 
 
 
