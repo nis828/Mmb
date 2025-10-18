@@ -42,7 +42,7 @@ class EnterpriseConfigurationManager {
              */
             bot: {
                 prefix: EnvironmentVariableProcessor.BOT_PREFIX || "m!","M!"  // 👈 prefix (!, ?, etc)
-                ownerIds: ["1004206704994566164"],["1188036843573354556"]      // 👈 ADD YOUR DISCORD ID HERE
+                ownerIds: ["1004206704994566164"],      // 👈 ADD YOUR DISCORD ID HERE
                 embedColor: FFC0CB,               // 👈 Bot embed color (hex)
                 supportServer: "https://discord.gg/mJYHu9VEME",    // 👈 Your support server link
                 defaultStatus: "🎵 Ready for music!"         // 👈 Bot status message
@@ -101,6 +101,7 @@ module.exports = primaryApplicationConfiguration;
  * Never share your bot token or database URI publicly!
  * Use environment variables in production!
  */
+
 
 
 
