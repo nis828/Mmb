@@ -57,7 +57,7 @@ module.exports = {
             }
 
             const embed = new EmbedBuilder()
-                .setTitle('📖 Sopanam Music Bot - Command List')
+                .setTitle('📖 Melomi Music Bot - Command List')
                 .setColor(0x1DB954)
                 .setDescription(description)
                 .setFooter({ text: 'Developed by nis | @.nis_' })
@@ -71,4 +71,5 @@ module.exports = {
         }
     }
 };
+
 
