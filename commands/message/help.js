@@ -44,7 +44,7 @@ module.exports = {
 
             description += `**💬 Message Commands [${messageCommands.length}]:**\n`;
             messageCommands.forEach(cmd => {
-                description += `- \`!${cmd.name}\` - ${cmd.description}\n`;
+                description += `- \`m!${cmd.name}\` - ${cmd.description}\n`;
             });
 
             description += `\n**⚡ Slash Commands [${slashCommands.length}]:**\n`;
@@ -71,5 +71,6 @@ module.exports = {
         }
     }
 };
+
 
 
