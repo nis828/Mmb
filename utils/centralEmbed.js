@@ -12,11 +12,10 @@ class CentralEmbedHandler {
             const channel = await this.client.channels.fetch(channelId);
             
             const embed = new EmbedBuilder()
-            .setAuthor({ name: 'Ultimate Music Control Center', iconURL: 'https://cdn.discordapp.com/emojis/896724352949706762.gif', url: 'https://discord.gg/xQF9f9yUEM' })
+            .setAuthor({ name: 'Melomi Music Control Center', iconURL: 'https://cdn.discordapp.com/emojis/896724352949706762.gif' })
                 .setDescription([
                     '',
                     '- Simply type a **song name** or **YouTube link** to start the party!',
-                    '- In free version I only support **YouTube** only.',
                     '',
                     '✨ *Ready to fill this place with amazing music?*'
                 ].join('\n'))
@@ -27,7 +26,7 @@ class CentralEmbedHandler {
                         value: [
                             '• `shape of you`',
                             '• `lofi hip hop beats`',
-                            '• `https://youtu.be/dQw4w9WgXcQ`',
+                            '• `https://youtu.be/examplelink`',
                             '• `imagine dragons believer`'
                         ].join('\n'),
                         inline: true
@@ -218,11 +217,10 @@ class CentralEmbedHandler {
             } else {
            
                 embed = new EmbedBuilder()
-                .setAuthor({ name: 'Ultimate Music Control Center', iconURL: 'https://cdn.discordapp.com/emojis/896724352949706762.gif', url: 'https://discord.gg/xQF9f9yUEM' })
+                .setAuthor({ name: 'Melomi Music Control Center', iconURL: 'https://cdn.discordapp.com/emojis/896724352949706762.gif' })
                 .setDescription([
                     '',
                     '- Simply type a **song name** or **YouTube link** to start the party!',
-                    '- In free version I only support **YouTube** only.',
                     '',
                     '✨ *Ready to fill this place with amazing music?*'
                 ].join('\n'))
@@ -233,7 +231,7 @@ class CentralEmbedHandler {
                         value: [
                             '• `shape of you`',
                             '• `lofi hip hop beats`',
-                            '• `https://youtu.be/dQw4w9WgXcQ`',
+                            '• `https://youtu.be/examplelink`',
                             '• `imagine dragons believer`'
                         ].join('\n'),
                         inline: true
@@ -263,7 +261,7 @@ class CentralEmbedHandler {
                 .setImage('https://i.ibb.co/DDSdKy31/ezgif-8aec7517f2146d.gif')
                 .setThumbnail('https://cdn.discordapp.com/attachments/1234567890/1234567890/music_note.gif') // Add a cute music note gif
                 .setFooter({ 
-                    text: 'Ultimate Music Bot • Developed By GlaceYT!',
+                    text: 'Melomi Music Bot • Developed By nis',
                     iconURL: this.client.user.displayAvatarURL()
                 })
                 .setTimestamp();
@@ -365,3 +363,4 @@ class CentralEmbedHandler {
 }
 
 module.exports = CentralEmbedHandler;
+
