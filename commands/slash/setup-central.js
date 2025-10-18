@@ -72,12 +72,12 @@ module.exports = {
             const setupData = {
                 _id: guildId,
                 centralSetup: {
-                    enabled: false,
+                    enabled: true,
                     channelId: channelId,
                     embedId: embedMessage.id,
                     vcChannelId: voiceChannel?.id || null,
                     allowedRoles: allowedRole ? [allowedRole.id] : [],
-                    deleteMessages: false
+                    deleteMessages: true
                 }
             };
 
@@ -136,5 +136,6 @@ module.exports = {
         }
     }
 };
+
 
 
