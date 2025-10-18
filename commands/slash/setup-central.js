@@ -107,7 +107,7 @@ module.exports = {
                             '• Type any **song name** to play music\n' +
                             '• Links (YouTube, Spotify) are supported\n' +
                             '• Other messages will be auto-deleted\n' +
-                            '• Use normal commands (`!play`, `/play`) in other channels\n\n' +
+                            '• Use normal commands (`m!play`, `/play`) in other channels\n\n' +
                             '⚠️ This message will be automatically deleted in 10 seconds!'
                         )
                         .setColor(0x1DB954)
@@ -136,3 +136,4 @@ module.exports = {
         }
     }
 };
+
