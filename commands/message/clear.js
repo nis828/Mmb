@@ -14,7 +14,7 @@ module.exports = {
         if (!shiva || !shiva.validateCore || !shiva.validateCore()) {
             const embed = new EmbedBuilder()
                 .setDescription('❌ System core offline - Command unavailable')
-                .setColor('#FFC0CB');
+                .setColor('#FF0000');
             return message.reply({ embeds: [embed] }).catch(() => {});
         }
 
@@ -63,4 +63,5 @@ module.exports = {
         }
     }
 };
+
 
