@@ -52,7 +52,7 @@ class CentralEmbedHandler {
 
             const embed = new EmbedBuilder()
 
-            .setAuthor({ name: 'Melomi Music Control Center', iconURL: 'https://cdn.discordapp.com/emojis/896724352949706762.gif' })
+            .setAuthor({ name: 'Melomi Music Control Center', iconURL: 'https://cdn.discordapp.com/emojis/896724352949706762.gif', url: 'https://discord.gg/mJYHu9VEME' })
 
                 .setDescription([
 
@@ -358,7 +358,9 @@ class CentralEmbedHandler {
 
                         name: `${trackInfo.title}`, 
 
-                        iconURL: 'https://cdn.discordapp.com/emojis/896724352949706762.gif'
+                        iconURL: 'https://cdn.discordapp.com/emojis/896724352949706762.gif',
+
+                        url: 'https://discord.gg/mJYHu9VEME' 
 
                     })
 
@@ -424,13 +426,13 @@ class CentralEmbedHandler {
 
                 embed = new EmbedBuilder()
 
-                .setAuthor({ name: 'Melomi Music Control Center', iconURL: 'https://cdn.discordapp.com/emojis/896724352949706762.gif' })
+                .setAuthor({ name: 'Melomi Music Control Center', iconURL: 'https://cdn.discordapp.com/emojis/896724352949706762.gif', url: 'https://discord.gg/mJYHu9VEME' })
 
                 .setDescription([
 
                     '',
 
-                    '- Simply type a **song name** or **YouTube link** to start the party!'
+                    '- Simply type a **song name** or **YouTube link** to start the party!',
 
                     '',
 
