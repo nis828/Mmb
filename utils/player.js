@@ -91,7 +91,39 @@ class PlayerHandler {
         }
     }
 
-    getPlayerInfo(guildId) {
+
+    async getThumbnailSafely(track) {
+        try {
+        
+            if (track.info.thumbnail instanceof Promise) {
+                const thumbnail = await Promise.race([
+                    track.info.thumbnail,
+                    new Promise((_, reject) => setTimeout(() => reject('timeout'), 2000))
+                ]);
+                return typeof thumbnail === 'string' ? thumbnail : null;
+            }
+            
+      
+            if (typeof track.info.thumbnail === 'string' && track.info.thumbnail.trim() !== '') {
+                return track.info.thumbnail;
+            }
+            
+      
+            if (track.info.identifier && track.info.sourceName === 'youtube') {
+                return `https://img.youtube.com/vi/${track.info.identifier}/maxresdefault.jpg`;
+            }
+            
+            return null;
+        } catch (error) {
+          
+            if (track.info.identifier && track.info.sourceName === 'youtube') {
+                return `https://img.youtube.com/vi/${track.info.identifier}/maxresdefault.jpg`;
+            }
+            return null;
+        }
+    }
+
+    async getPlayerInfo(guildId) {
         try {
             const player = this.client.riffy.players.get(guildId);
             
@@ -99,11 +131,14 @@ class PlayerHandler {
                 return null;
             }
 
+      
+            const thumbnail = await this.getThumbnailSafely(player.current);
+
             return {
                 title: player.current.info.title || 'Unknown Title',
                 author: player.current.info.author || 'Unknown Artist',
                 duration: player.current.info.length || 0,
-                thumbnail: player.current.info.thumbnail || null,
+                thumbnail: thumbnail,
                 requester: player.current.info.requester || null,
                 playing: player.playing || false,
                 paused: player.paused || false,
@@ -129,11 +164,13 @@ class PlayerHandler {
                 }
                 
                 if (track && track.info) {
+                    const thumbnail = await this.getThumbnailSafely(track);
+                    
                     await this.centralEmbed.updateCentralEmbed(player.guildId, {
                         title: track.info.title || 'Unknown Title',
                         author: track.info.author || 'Unknown Artist',
                         duration: track.info.length || 0,
-                        thumbnail: track.info.thumbnail || null,
+                        thumbnail: thumbnail,
                         requester: track.info.requester || null,
                         paused: player.paused || false,
                         volume: player.volume || 50,
